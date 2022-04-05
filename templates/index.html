@@ -1,0 +1,27 @@
+</head>
+<body>
+    <section id="boggle">
+
+        <table class="board">
+            <tbody>
+                {% for row in board %}
+                <tr>
+                    {% for cell in row %}
+                    <td>{{ cell }}</td>
+                    {% endfor%}
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        <!-- Build Form here -->
+
+
+        <script src="http://unpkg.com/jquery"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="/static/app.js"></script>
+    <script>
+        let game = new BoggleGame('boggle');
+    </script>
+</body>
+
+</html>
