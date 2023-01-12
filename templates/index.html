@@ -2,6 +2,9 @@
 <body>
     <section id="boggle">
 
+        <p class="score">Score: {{ score }}</p>
+        <p class="timer"></p>
+
         <table class="board">
             <tbody>
                 {% for row in board %}
@@ -14,11 +17,24 @@
             </tbody>
         </table>
         <!-- Build Form here -->
+        <form method="POST" class="add-word">
+            <input name="word" class="word" autofocus>
+            <button>Enter your guess!</button>
+        </form>
+
+        <p class="msg"></p>
+
+        <ul class="words">
+
+        </ul>
+
+        <button class='reset'>Play Again</button>
+
 
 
         <script src="http://unpkg.com/jquery"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script src="/static/app.js"></script>
+    <script src="/static/boggle.js"></script>
     <script>
         let game = new BoggleGame('boggle');
     </script>
